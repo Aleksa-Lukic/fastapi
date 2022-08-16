@@ -4,7 +4,7 @@ FROM python:3.9
 WORKDIR /fastapi
 
 COPY ./requierements.txt /fastapi/requierements.txt
-COPY ./app fastapi/app
+COPY ./app /fastapi/app
 
 RUN pip install --no-cache-dir -r requierements.txt
 
