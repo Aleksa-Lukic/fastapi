@@ -29,6 +29,10 @@ class ResponseItem(BaseModel):
 
 app = FastAPI()
 
+@app.get('/')
+async def hallo():
+    return {"message":"hallo du hund"}
+
 @app.get("/users/{user_id}")
 def get_user(user_id: int):
     return items[user_id]
